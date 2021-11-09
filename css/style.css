@@ -1,0 +1,63 @@
+.vl {
+  border-left: 6px solid black;
+  height: 100px;
+  position: absolute;
+  left: 50%;
+}
+.pic {
+    padding-top: 120px;
+  	padding-right: 120px;
+  	padding-bottom: 50px;
+  	padding-left: 80px;
+}
+.date{
+	height: 250px;
+}
+.ceremony{
+	 padding-top: 30px;
+  	 padding-left: 320px;
+}
+.ceremony_timimg{
+	 padding-top: 30px;
+  	 padding-right: 320px;
+}
+.lunch_time{
+	padding-top: 50px;
+	padding-left: 280px;
+}
+.lunch{
+	padding-top: 50px;
+  	 padding-right: 400px;
+}
+.attending{
+	height: 500px;
+}
+.text{
+	padding-top: 150px;
+  	 padding-left: 320px;
+}
+.flower{
+	padding-top: 50px;
+  	 padding-right: 400px;
+}
+.moments{
+	height: 700px;
+}
+.footer{
+	height: 300px;
+}
+.footer_recent{
+	padding-top: 30px;
+  	 padding-left: 250px;
+}
+.footer_address{
+		padding-top: 30px;
+  	  padding-left: 150px;
+}
+.footer_links{
+	padding-top: 30px;
+  	  padding-right:  150px;
+}
+.event{
+	height: 700px;
+}

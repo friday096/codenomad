@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>JSON Demo</title>
+</head>
+<body>
+  <ul id="user"></ul>
+  <script>
+  	var a = ['santosh','mic','kin'];
+  	var len = a.length;
+    document.getElementById('user').innerHTML = len;
+  </script>
+</body>
+</html>
+<script type="text/javascript">
+	var arr = [25, 55, 95, 65];
+
+	function contains(arr, element) {
+    for (var i = 0; i < arr.length; i++) {
+        if (arr[i] === element) {
+            return true;
+        }
+    }
+    return false;
+}
+console.log(contains(arr, 25));
+</script>
+<script type='text/javascript'>
+
+var names_arr = ['sonarika','yogesh','sumit','sonarika','vijay','anil'];
+ 
+function checkValue(value,arr){
+  var status = 'Not exist';
+ 
+  for(var i=0; i<arr.length; i++){
+    var name = arr[i];
+    if(name == value){
+      status = 'Exist';
+      break;
+    }
+  }
+
+  return status;
+}
+console.log('status : ' + checkValue('sonarika', names_arr) );
+console.log('status : ' + checkValue('mayank', names_arr) );
+</script>
+<script type="text/javascript">
+	var jsonArry = [
+                  {"AllLinks":"Link9",},
+                  {"AllLinks":"Link6","LinkURL":"http://www.Link6.com"}
+                  ];
+
+var value = "Link";
+
+for(var i=0; i<jsonArry.length; i++){
+   if(jsonArry[i].AllLinks === value){
+        jsonArry.splice(i,1);
+   }
+}
+
+console.log(JSON.stringify(jsonArry));
+</script>

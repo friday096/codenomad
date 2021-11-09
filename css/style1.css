@@ -1,0 +1,38 @@
+.year {
+    border: 1px solid black;
+    margin-top: -49px;
+    margin-bottom: 100px;
+    margin-right: 381px;
+    margin-left: 320px;
+    background-color: lightblue;
+    height: 157px;
+}
+.button1 {
+    border: 1px solid black;
+    margin-top: 115px;
+    margin-bottom: 100px;
+    margin-right: 381px;
+    margin-left: 66px;
+    width: 100px;
+}
+.button2 {
+    left: 66px;
+    position: absolute;
+    top: 178px;
+    width: 100px;
+    border: 1px solid black;
+}
+.button3 {
+  left: 66px;
+  position: absolute;
+  top: 240px;
+  width: 100px;
+  border: 1px solid black;
+}
+.button4 {
+  left: 66px;
+  position: absolute;
+  top: 300px;
+  width: 100px;
+  border: 1px solid black;
+}

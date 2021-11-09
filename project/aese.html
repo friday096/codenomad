@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+
+</head>
+<body>
+<input type="text" name="search_value">
+<div class="table-data">
+  <table>
+    <tbody>
+    </tbody>
+  </table>
+</div>
+</body>
+</html>
+<script type="text/javascript">
+	$('input[name="search_value"]').on('input', function() {
+  // setTimeout to simulate ajax
+  setTimeout(function() {
+    var data = [
+      ["1","Your Name 1","button_field"],
+      ["2","Your Name 2","button_field"],
+      ["3","Your Name 3","button_field"]
+    ];
+    var search = $('input[name="search_value"]').val().toLowerCase();
+    var output = '';
+
+    for (var i = 0; i < data.length; i++) {
+      if (!search || data[i].some(function(entry) { return entry.toLowerCase().indexOf(search) != -1; })) {
+        output += '<tr>';
+
+        for (j = 0; j < data[i].length; j++) {
+          output += '<td>' + data[i][j] + '</td>';
+        }
+
+        output += '</tr>';
+      }
+    }
+
+    $('.table-data > table > tbody').html(output);
+  });
+});
+</script>

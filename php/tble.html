@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.js"></script>
+    <script type="text/javascript">
+        $(document).ready(function () {
+        	$('body').on('click','#edit', function  () {
+        		var id    = $(this).parents('tr').find("td:eq(0)").text();
+        		var fname = $(this).parents('tr').find("td:eq(1)").text();
+        		var lname = $(this).parents('tr').find("td:eq(2)").text();
+        		var email = $(this).parents('tr').find("td:eq(3)").text();
+
+        		$(this).parents('tr').find('td:eq(0)').html("<input name='id'    value='"+id+"'>");
+        		$(this).parents('tr').find('td:eq(1)').html("<input name='fname' value='"+fname+"'>");
+        		$(this).parents('tr').find('td:eq(2)').html("<input name='lname' value='"+lname+"'>");
+        		$(this).parents('tr').find('td:eq(3)').html("<input name='email' value='"+email+"'>");
+
+        	    $(this).parents('tr').find('td:eq(4)').prepend("<button id='update' type='button'>Update</button>");
+                $(this).hide();
+
+            });              
+				$('body').on('click','#update', function  () {
+
+					var id    = $(this).parents('tr').find("input[name='id']").val();
+					var fname = $(this).parents('tr').find("input[name='fname']").val();
+					var lname = $(this).parents('tr').find("input[name='lname']").val();
+					var email = $(this).parents('tr').find("input[name='email']").val();
+
+					  $(this).parents('tr').find('td:eq(0)').text(id);
+				      $(this).parents('tr').find('td:eq(1)').text(fname);
+				      $(this).parents('tr').find('td:eq(2)').text(lname);
+				      $(this).parents('tr').find('td:eq(3)').text(email);
+
+				      // I don;t know what is this for-----
+				      // $(this).parents('tr').attr('id',id);
+				      // $(this).parents('tr').attr('fname',fname);
+				      // $(this).parents('tr').attr('lname',lname);
+				      // $(this).parents('tr').attr('email',email);
+
+				      $(this).parents('tr').find('#edit').show();
+				      $(this).parents('tr').find('#update').remove();
+            });
+
+				$('body').on('click','#del',function(){
+					$(this).parents('tr').remove();
+				});
+        });
+
+</script>
+</head>
+<body>
+<div class="container">
+	<center><h2> User Table</h2> </center>
+	  <table class="preshantb" style="width:100%"> 
+		     	<tr class="table-dark">
+			      <td>#ID</td>
+				   <td> First Name</td>
+					<td> Last Name</td>
+						<td> Email</td>
+						<td> Action</td>
+				</tr>
+					<tbody >
+      					<tr class="table-primary">
+					      <td name="id">1</td>
+						   <td name="fname"> santosh</td>
+							<td name="lname"> Kumar</td>
+							 <td name="email"> santosh@gmail.com</td>
+							 <td><button id="edit" type='button' class='btn btn-info btn-md btn-update mr-3'>Edit</button>
+							  <button id="del" type='button' class='btn btn-danger btn-md btn-update mr-3'>Delete</button>	</td>
+				        </tr>
+				        <tr class="table-primary">
+					      <td name="id">2</td>
+						   <td name="fname"> vijay</td>
+							<td name="lname"> Kumar</td>
+							 <td name="email"> vijay@gmail.com</td>
+							 <td><button id="edit" type='button' class='btn btn-info btn-md btn-update mr-3'>Edit</button>
+							  <button id="del" type='button' class='btn btn-danger btn-md btn-update mr-3'>Delete</button>	</td>
+				        </tr>
+                    </tbody>				
+	  </table> 
+</div>
+</body>
+</html>
